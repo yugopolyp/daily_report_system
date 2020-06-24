@@ -12,8 +12,11 @@
 </c:if>
 <label for="report_date">日付</label><br />
 <input type="date" name="report_date" value="<fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' />" />
-<br /><br />
 
+
+
+
+<br /><br />
 <label for="name">氏名</label><br />
 <c:out value="${sessionScope.login_employee.name}" />
 <br /><br />
@@ -24,7 +27,22 @@
 
 <label for="content">内容</label><br />
 <textarea name="content" rows="10" cols="50">${report.content}</textarea>
+
+
 <br /><br />
+<label for="start">出勤時間</label><br />
+<input type="text" name="report_start" value="${report.report_start}" />
+
+<br /><br />
+<label for="end">退勤時間</label><br />
+<input type="text" name="report_end"  value="${report.report_end}" />
+
+
+<br /><br />
+
+
+
 
 <input type="hidden" name="_token" value="${_token}" />
 <button type="submit">投稿</button>
+
